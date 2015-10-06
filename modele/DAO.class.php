@@ -43,7 +43,7 @@ include_once ('Outils.class.php');
 
 // inclusion des paramètres de l'application
 include_once ('include.parametres.php');
-
+//test
 // début de la classe DAO (Data Access Object)
 class DAO
 {
