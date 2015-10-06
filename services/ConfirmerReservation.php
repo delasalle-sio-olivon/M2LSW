@@ -71,7 +71,7 @@ else
 				}else{
 					TraitementAnormal("Erreur : cette réservation est déjà confirmée.");
 				}
-				
+				 
 				
 			}else{
 				TraitementAnormal("Erreur : vous n'êtes pas l'auteur de cette réservation.");
