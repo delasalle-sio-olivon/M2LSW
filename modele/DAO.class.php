@@ -1,6 +1,6 @@
 <?php
 // -------------------------------------------------------------------------------------------------------------------------
-//                                                 DAO : Data Access ObjecA
+//                                                 DAO : Data Access ObjecM
 //                   Cette classe fournit des méthodes d'accès à la bdd mrbs (projet Réservations M2L)
 //                       Auteur : JM Cartron                       Dernière modification : 21/5/2015
 // -------------------------------------------------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ include_once ('Outils.class.php');
 
 // inclusion des paramètres de l'application
 include_once ('include.parametres.php');
-
+//test2
 // début de la classe DAO (Data Access Object)
 class DAO
 {
