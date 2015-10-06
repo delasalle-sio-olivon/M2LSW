@@ -1,6 +1,6 @@
 <?php
 // -------------------------------------------------------------------------------------------------------------------------
-//                                                 DAO : Data Access Object
+//                                                 DAO : Data Access ObjecA
 //                   Cette classe fournit des méthodes d'accès à la bdd mrbs (projet Réservations M2L)
 //                       Auteur : JM Cartron                       Dernière modification : 21/5/2015
 // -------------------------------------------------------------------------------------------------------------------------
