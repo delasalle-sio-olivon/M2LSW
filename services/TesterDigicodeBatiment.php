@@ -28,7 +28,7 @@ $doc->version = '1.0';
 $doc->encoding = 'ISO-8859-1';
   
 // crée un commentaire et l'encode en ISO
-$elt_commentaire = $doc->createComment('Service web TesterDigicodeSalle - BTS SIO - Lycée De La Salle - Rennes');
+$elt_commentaire = $doc->createComment('Service web TesterDigicodeBatiment - BTS SIO - Lycée De La Salle - Rennes');
 // place ce commentaire à la racine du document XML
 $doc->appendChild($elt_commentaire);
 	
