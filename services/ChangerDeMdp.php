@@ -2,14 +2,14 @@
 // Service web du projet Réservations M2L
 // Ecrit le 21/5/2015 par Jim
 
-// Ce service web permet à un utilisateur de consulter ses réservations à venir
-// et fournit un flux XML contenant un compte-rendu d'exécution
+// Ce service web permet à un utilisateur de changer son mdp
+// et fournit un flux XML contenant un compte-rendu d'exécution ainsi qu'un envoye du nouveau mdp par mail
 
-// Le service web doit recevoir 2 paramètres : nom, mdp
+// Le service web doit recevoir 2 paramètres : nom, ancien mdp, nouveau mdp X2
 // Les paramètres peuvent être passés par la méthode GET (pratique pour les tests, mais à éviter en exploitation) :
-//     http://<hébergeur>/ConsulterReservations.php?nom=zenelsy&mdp=passe
+//     http://<hébergeur>/ChanegrDeMdp.php?nom=zenelsy&mdp=passe
 // Les paramètres peuvent être passés par la méthode POST (à privilégier en exploitation pour la confidentialité des données) :
-//     http://<hébergeur>/ConsulterReservations.php
+//     http://<hébergeur>/ChanegrDeMdp.php
 
 // déclaration des variables globales pour pouvoir les utiliser aussi dans les fonctions
 global $doc;		// le document XML à générer
@@ -28,7 +28,7 @@ $doc->version = '1.0';
 $doc->encoding = 'ISO-8859-1';
   
 // crée un commentaire et l'encode en ISO
-$elt_commentaire = $doc->createComment('Service web ConsulterReservations - BTS SIO - Lycée De La Salle - Rennes');
+$elt_commentaire = $doc->createComment('Service web ChangerMdpReservations - BTS SIO - Lycée De La Salle - Rennes');
 // place ce commentaire à la racine du document XML
 $doc->appendChild($elt_commentaire);
 	
