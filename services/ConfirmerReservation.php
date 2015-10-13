@@ -67,18 +67,12 @@ else
 					}else{
 						TraitementAnormal("Erreur : cette réservation est déjà passée.");
 					}
-					
 				}else{
 					TraitementAnormal("Erreur : cette réservation est déjà confirmée.");
 				}
-				 
-				
 			}else{
 				TraitementAnormal("Erreur : vous n'êtes pas l'auteur de cette réservation.");
 			}
-			
-			
-			
 		}else{
 			TraitementAnormal("Erreur : numéro de réservation inexistant.");
 		}
