@@ -2,14 +2,14 @@
 // Service web du projet Réservations M2L
 // Ecrit le 21/5/2015 par Jim
 
-// ce service web est appelé par le lecteur de digicode situé à l'entrée d'une salle,
+// ce service web est appelé par le lecteur de digicode situé à l'entrée du batiment de la M2L,
 // afin de tester la validité du digicode saisi par l'utilisateur
 
 // Le service web doit recevoir 2 paramètres : numSalle, digicode
 // Les paramètres peuvent être passés par la méthode GET (pratique pour les tests, mais à éviter en exploitation) :
-//     http://<hébergeur>/TesterDigicodeSalle.php?numSalle=10&digicode=123456
+//     http://<hébergeur>/TesterDigicodeBatiment.php?numSalle=10&digicode=123456
 // Les paramètres peuvent être passés par la méthode POST (à privilégier en exploitation pour la confidentialité des données) :
-//     http://<hébergeur>/TesterDigicodeSalle.php
+//     http://<hébergeur>/TesterDigicodeBatiment.php
 
 // déclaration des variables globales pour pouvoir les utiliser aussi dans les fonctions
 global $doc;		// le document XML à générer
@@ -28,7 +28,7 @@ $doc->version = '1.0';
 $doc->encoding = 'ISO-8859-1';
   
 // crée un commentaire et l'encode en ISO
-$elt_commentaire = $doc->createComment('Service web TesterDigicodeSalle - BTS SIO - Lycée De La Salle - Rennes');
+$elt_commentaire = $doc->createComment('Service web TesterDigicodeBatiment - BTS SIO - Lycée De La Salle - Rennes');
 // place ce commentaire à la racine du document XML
 $doc->appendChild($elt_commentaire);
 	
@@ -86,7 +86,7 @@ function TraitementNormal()
 	$elt_data = $doc->createElement('data');
 	$doc->appendChild($elt_data);
 	// place l'élément 'reponse' juste après l'élément 'data'
-	$reponse = $dao->testerDigicodeBatiment($digicode);		// la fonction testerDigicodeSalle fournit "0" ou "1"
+	$reponse = $dao->testerDigicodeBatiment($digicode);		// la fonction testerDigicodeBatiment fournit "0" ou "1"
 	$elt_reponse = $doc->createElement('reponse', $reponse);
 	$elt_data->appendChild($elt_reponse);
 	return;

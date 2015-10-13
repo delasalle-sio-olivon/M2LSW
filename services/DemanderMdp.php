@@ -2,18 +2,18 @@
 // Service web du projet Réservations M2L
 // Ecrit le 21/5/2015 par Jim
 
-// Ce service web permet à un utilisateur de consulter ses réservations à venir
-// et fournit un flux XML contenant un compte-rendu d'exécution
+// Ce service web permet à un utilisateur qui a oublié son mot de passe 
+// d'en demander un nouveau et de se le faire envoyer par mail.
 
-// Le service web doit recevoir 2 paramètres : nom, mdp
+// Le service web doit recevoir un paramètre : nom 
 // Les paramètres peuvent être passés par la méthode GET (pratique pour les tests, mais à éviter en exploitation) :
-//     http://<hébergeur>/ConsulterReservations.php?nom=zenelsy&mdp=passe
+//     http://<hébergeur>/DemandeMdp.php?nom=zenelsy
 // Les paramètres peuvent être passés par la méthode POST (à privilégier en exploitation pour la confidentialité des données) :
-//     http://<hébergeur>/ConsulterReservations.php
+//     http://<hébergeur>/DemandeMdp.php
 
 // déclaration des variables globales pour pouvoir les utiliser aussi dans les fonctions
 global $doc;		// le document XML à générer
-global $nom, $numRes;
+global $nom;
 
 // inclusion de la classe Outils
 include_once ('../modele/Outils.class.php');
@@ -28,7 +28,7 @@ $doc->version = '1.0';
 $doc->encoding = 'ISO-8859-1';
   
 // crée un commentaire et l'encode en ISO
-$elt_commentaire = $doc->createComment('Service web ConsulterReservations - BTS SIO - Lycée De La Salle - Rennes');
+$elt_commentaire = $doc->createComment('Service web DemanderMdp - BTS SIO - Lycée De La Salle - Rennes');
 // place ce commentaire à la racine du document XML
 $doc->appendChild($elt_commentaire);
 	
