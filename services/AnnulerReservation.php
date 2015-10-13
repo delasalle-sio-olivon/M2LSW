@@ -2,7 +2,7 @@
 // Service web du projet Réservations M2L
 // Ecrit le 21/5/2015 par Jim
 
-// Ce service web permet à un utilisateur de consulter ses réservations à venir
+// Ce service web permet à un utilisateur d'annuler ses réservations à venir
 // et fournit un flux XML contenant un compte-rendu d'exécution
 
 // Le service web doit recevoir 2 paramètres : nom, mdp
@@ -28,7 +28,7 @@ $doc->version = '1.0';
 $doc->encoding = 'ISO-8859-1';
   
 // crée un commentaire et l'encode en ISO
-$elt_commentaire = $doc->createComment('Service web ConsulterReservations - BTS SIO - Lycée De La Salle - Rennes');
+$elt_commentaire = $doc->createComment('Service web AnnulerReservations - BTS SIO - Lycée De La Salle - Rennes');
 // place ce commentaire à la racine du document XML
 $doc->appendChild($elt_commentaire);
 	
@@ -69,13 +69,9 @@ else
 			}else{
 				TraitementAnormal("Erreur : vous n'êtes pas l'auteur de cette réservation.");
 			}
-			
-			
-			
 		}else{
 			TraitementAnormal("Erreur : numéro de réservation inexistant.");
 		}
-		
 	}
 	// ferme la connexion à MySQL
 	unset($dao);
@@ -86,8 +82,6 @@ $doc->formatOutput = true;
 echo $doc->saveXML();
 // fin du programme
 exit;
-
-
 // fonction de traitement des cas anormaux
 function TraitementAnormal($msg)
 {	// redéclaration des données globales utilisées dans la fonction
@@ -100,7 +94,6 @@ function TraitementAnormal($msg)
 	$elt_data->appendChild($elt_reponse);
 	return;
 }
- 
 
 // fonction de traitement des cas normaux
 function TraitementNormal($numRes)

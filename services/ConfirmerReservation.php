@@ -2,10 +2,10 @@
 // Service web du projet Réservations M2L
 // Ecrit le 21/5/2015 par Jim
 
-// Ce service web permet à un utilisateur de consulter ses réservations à venir
+// Ce service web permet à un utilisateur de confirmer une réservation à venir
 // et fournit un flux XML contenant un compte-rendu d'exécution
 
-// Le service web doit recevoir 2 paramètres : nom, mdp
+// Le service web doit recevoir 3 paramètres : nom, mdp, numero de reservation
 // Les paramètres peuvent être passés par la méthode GET (pratique pour les tests, mais à éviter en exploitation) :
 //     http://<hébergeur>/ConsulterReservations.php?nom=zenelsy&mdp=passe
 // Les paramètres peuvent être passés par la méthode POST (à privilégier en exploitation pour la confidentialité des données) :
@@ -28,7 +28,7 @@ $doc->version = '1.0';
 $doc->encoding = 'ISO-8859-1';
   
 // crée un commentaire et l'encode en ISO
-$elt_commentaire = $doc->createComment('Service web ConsulterReservations - BTS SIO - Lycée De La Salle - Rennes');
+$elt_commentaire = $doc->createComment('Service web ConfirmerReservations - BTS SIO - Lycée De La Salle - Rennes');
 // place ce commentaire à la racine du document XML
 $doc->appendChild($elt_commentaire);
 	
