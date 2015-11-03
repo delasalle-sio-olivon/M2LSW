@@ -33,7 +33,7 @@
 		else {
 			if($dao->estLeCreateur($_SESSION["nom"], $numero)){
 				$res = $dao->getReservation($numero);
-				if($res->getEnd_time()<now()){
+				if($res->getEnd_time() < time()){
 					$msgFooter = "Cette réservation est déjà passé.";
 					$themeFooter = $themeProbleme;
 				}else{
@@ -43,13 +43,12 @@
 						
 					$msgFooter = 'La réservation a été annulé.';
 					$themeFooter = $themeNormal;
-					include_once ('vues/VueAnnulerReservation.php');
 				}
 			}else{
 				$msgFooter = "Vous n'êtes pas l'auteur de cette réservation.";
 				$themeFooter = $themeProbleme;
 			}
-			include_once ('vues/VueConfirmerReservation.php');
+			include_once ('vues/VueAnnulerReservation.php');
 		}
 		
 		unset($dao);		// fermeture de la connexion à MySQL
