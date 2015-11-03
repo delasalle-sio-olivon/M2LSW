@@ -3,7 +3,7 @@
 // Fonction du contrôleur CtrlAnnulerReservation.php : annulation d'une réservation
 // Ecrit le 12/10/2015 par Jim
 
-	if ( ! isset ($_POST ["numero"]) == true) {
+	if (! isset ($_POST ["numero"]) == true) {
 		// si les données n'ont pas été postées, c'est le premier appel du formulaire : affichage de la vue sans message d'erreur
 		$msgFooter = 'Annuler une réservation';
 		$themeFooter = $themeNormal;
@@ -25,19 +25,32 @@
 		// test de l'existence d'une réservation
 		// la méthode existeReservation de la classe DAO retourne true si $nom existe, false s'il n'existe pas
 		if ( ! $dao->existeReservation($numero) )  {
-			// si le nom n'existe pas, retour à la vue
+			// si le numero n'existe pas, retour à la vue
 			$msgFooter = "Numéro réservation inexistant !";
 			$themeFooter = $themeProbleme;
 			include_once ('vues/VueAnnulerReservation.php');
 		}
 		else {
-			// annule la réservation du numéro suivant donné en paramètre
-			$dao->annulerReservation($numero);
-				
-			$msgFooter = 'La réservation a été annulé.';
-			$themeFooter = $themeNormal;
-			include_once ('vues/VueAnnulerReservation.php');
-				
+			if($dao->estLeCreateur($_SESSION["nom"], $numero)){
+				$res = $dao->getReservation($numero);
+				if($res->getEnd_time()<now()){
+					$msgFooter = "Cette réservation est déjà passé.";
+					$themeFooter = $themeProbleme;
+				}else{
+			
+					// annule la réservation du numéro suivant donné en paramètre
+					$dao->annulerReservation($numero);
+						
+					$msgFooter = 'La réservation a été annulé.';
+					$themeFooter = $themeNormal;
+					include_once ('vues/VueAnnulerReservation.php');
+				}
+			}else{
+				$msgFooter = "Vous n'êtes pas l'auteur de cette réservation.";
+				$themeFooter = $themeProbleme;
+			}
+			include_once ('vues/VueConfirmerReservation.php');
 		}
+		
 		unset($dao);		// fermeture de la connexion à MySQL
 	}
