@@ -518,7 +518,7 @@ class DAO
 	// modifié par Jim le 6/5/2015
 	function listeSalles()
 	{	// A FAIRE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	
+	 
 	}
 	
 } // fin de la classe DAO
