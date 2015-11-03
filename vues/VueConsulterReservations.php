@@ -24,9 +24,8 @@
 						<h5>Réservation n°<?php echo $res->getId()?></h5>
 						<p>Passée le <?php echo $res->getTimestamp()?></p>
 						<p>Début : <?php echo $res->getStart_time()?></p>
-						<p>Fin : <?php echo $res->getStart_end()?></p>
-						<p>Salle : <?php echo $res->getStart_end()?></p>
-						<p>Fin <?php echo $res->getStart_end()?></p>
+						<p>Fin : <?php echo $res->getEnd_time()?></p>
+						<p>Salle : <?php echo $res->getRoom_name()?></p>
 						<p>Etat <?php if($res->getStatus()==4)echo "En attente"; else echo "Confirmée"?></p>
 						<h5>Digicode <?php echo $res->getDigicode() ?></h5>
 						</li>
@@ -41,7 +40,7 @@
 				
 			</div>
 			<div data-role="footer" data-position="fixed" data-theme="<?php echo $themeNormal; ?>">
-				<h4><?php $msgFooter?></h4>
+				<h4><?php echo $msgFooter?></h4>
 			</div>
 		</div>
 	</body>
