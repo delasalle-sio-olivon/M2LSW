@@ -44,7 +44,6 @@
 						
 					$msgFooter = 'La réservation a été annulé.';
 					$themeFooter = $themeNormal;
-					include_once ('vues/VueAnnulerReservation.php');
 				}
 			}else{
 				$msgFooter = "Vous n'êtes pas l'auteur de cette réservation.";
