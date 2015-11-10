@@ -24,15 +24,15 @@
 
 		// test de l'existence d'une réservation
 		// la méthode existeReservation de la classe DAO retourne true si $nom existe, false s'il n'existe pas
-		if ( $dao->supprimerUtilisateur($name))  {
+		if ( $dao->existeUtilisateur($nom))  {
 			// si le nom n'existe pas, retour à la vue
+			$dao->supprimerUtilisateur($nom);
 			$msgFooter = "Utilisateur supprimé!";
 
 			include_once ('vues/VueSupprimerUtilisateur.php');
-		}
-		else {
+		}else {
 			// annule la réservation du numéro suivant donné en paramètre
-			$msgFooter = "Cet utilisateur n'éxite pas.";
+			$msgFooter = "Cet utilisateur n'éxiste pas.";
 			$themeFooter = $themeProbleme;
 			include_once ('vues/VueSupprimerUtilisateur.php');
 				
