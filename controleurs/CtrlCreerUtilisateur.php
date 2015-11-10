@@ -19,7 +19,7 @@
 		$msgFooter = 'Données incomplètes !';
 		$themeFooter = $themeProbleme;
 		include_once ('vues/VueCreerUtilisateur.php');
-	}else {
+	} else {
 		// connexion du serveur web à la base MySQL
 		include_once ('modele/DAO.class.php');
 		$dao = new DAO();
@@ -39,5 +39,5 @@
 			include_once ('vues/VueSupprimerUtilisateur.php');
 				
 		}
-		unset($dao);		// fermeture de la connexion à MySQL
+		unset($dao); // fermeture de la connexion à MySQL
 	}

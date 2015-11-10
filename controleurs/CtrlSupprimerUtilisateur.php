@@ -37,5 +37,5 @@
 			include_once ('vues/VueSupprimerUtilisateur.php');
 				
 		}
-		unset($dao);		// fermeture de la connexion à MySQL
+		unset($dao); // fermeture de la connexion à MySQL
 	}
