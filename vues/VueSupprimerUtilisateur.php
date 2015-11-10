@@ -15,7 +15,7 @@
 				<a href="index.php?action=Menu">Retour</a>
 			</div>
 			<div data-role="content">
-				<h4 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Modifier son mot de passe</h4>
+				<h4 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Supprimer un utilisateur</h4>
 				<form name="form1" id="form1" action="index.php?action=SupprimerUtilisateur" method="post">
 					<div data-role="fieldcontain" class="ui-hide-label">
 						<input type="text" name="nom" id="nom" placeholder="Entrez le nom" value="" >
