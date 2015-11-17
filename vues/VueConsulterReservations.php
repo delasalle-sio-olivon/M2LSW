@@ -26,8 +26,8 @@
 						<p class="ui-li-desc">Début : <?php echo utf8_encode(date('d-M-Y H:i', $res->getStart_time()))?></p>
 						<p class="ui-li-desc">Fin : <?php echo utf8_encode(date('d-M-Y H:i', $res->getEnd_time()))?></p>
 						<p class="ui-li-desc">Salle : <?php echo utf8_encode($res->getRoom_name())?></p>
-						<p class="ui-li-desc">Etat <?php if($res->getStatus()==4)echo "En attente"; else echo "Confirmée"?></p>
-						<h5 class="ui-li-aside ui-li-heading">Digicode : <b style="color: red"><?php echo $res->getDigicode() ?></b></h5>
+						<p class="ui-li-desc">Etat :<?php if($res->getStatus()==4)echo "En attente"; else echo "Confirmée"?></p>
+						<?php if($res->getStatus()!=4){ ?><h5 class="ui-li-aside ui-li-heading">Digicode : <b style="color: red"><?php echo $res->getDigicode() ?></b></h5><?php }?>
 						</li>
 					<?php } ?>
 				</ul>

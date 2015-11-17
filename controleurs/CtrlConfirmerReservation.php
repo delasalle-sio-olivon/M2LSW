@@ -35,16 +35,16 @@ if ( ! isset ($_POST ["numero"]) == true) {
 				$res = $dao->getReservation($numero);
 				if($res->getStatus() == 4){
 					if($res->getEnd_time()<time()){
-						$msgFooter = "Cette réservation est déjà passé.";
+						$msgFooter = "Cette réservation est déjà passée.";
 						$themeFooter = $themeProbleme;
 					}else{
 						// annule la réservation du numéro suivant donné en paramètre
 						$dao->confirmerReservation($numero);
-						$msgFooter = 'La réservation a été confirmer.';
+						$msgFooter = 'La réservation a été confirmée.';
 						$themeFooter = $themeNormal;
 					}
 				}else{
-					$msgFooter = "Cette réservation est déjà confirmer.";
+					$msgFooter = "Cette réservation est déjà confirmée.";
 					$themeFooter = $themeProbleme;
 				}
 			}else{

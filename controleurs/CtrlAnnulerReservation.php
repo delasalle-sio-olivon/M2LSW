@@ -35,14 +35,14 @@
 				$dao->creerLesDigicodesManquants();
 				$res = $dao->getReservation($numero);
 				if($res->getEnd_time() < time()){
-					$msgFooter = "Cette réservation est déjà passé.";
+					$msgFooter = "Cette réservation est déjà passée.";
 					$themeFooter = $themeProbleme;
 				}else{
 			
 					// annule la réservation du numéro suivant donné en paramètre
 					$dao->annulerReservation($numero);
 						
-					$msgFooter = 'La réservation a été annulé.';
+					$msgFooter = 'La réservation a été annulée.';
 					$themeFooter = $themeNormal;
 				}
 			}else{
