@@ -16,7 +16,7 @@
 			</div>
 			<div data-role="content">
 				<h4 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Créer un utilisateur</h4>
-				<form name="form1" id="form1" action="index.php?action=ChangerDeMdp" method="post">
+				<form name="form1" id="form1" action="index.php?action=CreerUtilisateur" method="post">
 					<div data-role="fieldcontain" class="ui-hide-label">
 						<input type="text" name="nom" id="nom" placeholder="Entrez le nom" value="" >
 					</div>
@@ -27,7 +27,7 @@
 						<input type="text" name="mail" id="mail" placeholder="Entrez l'adresse e-mail" value="" >
 					</div>
 					<div data-role="fieldcontain">
-						<input type="submit" name="changerDeMdp" id=""changerDeMdp"" value="Supprimer l'utilisateur">
+						<input type="submit" name="creerUtilisateur" id="creerUtilisateur" value="Créer un utilisateur">
 					</div>
 				</form>
 			</div>
