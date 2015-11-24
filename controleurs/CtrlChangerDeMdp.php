@@ -39,7 +39,7 @@
 				
 			$msgFooter = 'La confirmation est différente.';
 			$themeFooter = $themeProbleme;
-			include_once ('vues/VueAnnulerReservation.php');
+			include_once ('vues/VueChangerDeMdp.php');
 				
 		}
 		unset($dao);		// fermeture de la connexion à MySQL

@@ -36,7 +36,7 @@
 			// annule la réservation du numéro suivant donné en paramètre
 			$msgFooter = "Cet utilisateur éxite déjà.";
 			$themeFooter = $themeProbleme;
-			include_once ('vues/VueSupprimerUtilisateur.php');
+			include_once ('vues/VueCreerUtilisateur.php');
 				
 		}
 		unset($dao); // fermeture de la connexion à MySQL
