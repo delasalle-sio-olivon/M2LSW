@@ -29,7 +29,10 @@
 		if ( $dao->existeUtilisateur($nom))  {
 			// si le nom n'existe pas, retour à la vue
 			$msgFooter = "Utilisateur créer!";
-			$dao->enregistrerUtilisateur($nom, $lvl, $dao->genererUnDigicode(), $mail);
+			$outil = new Outils();
+			$mdp = $outil->creerMdp();
+			$dao->enregistrerUtilisateur($nom, $lvl, $mdp, $mail);
+			$outil->envoyerMail($mail, "Vous êtes membre de M2L!", "Vous avez été ajouté au site avec le pseudo : ".$nom. " et avec le mot de passe : ".$mdp, "delasalle.sio.olivon.a@gmail.com");
 			include_once ('vues/VueCreerUtilisateur.php');
 		}
 		else {
