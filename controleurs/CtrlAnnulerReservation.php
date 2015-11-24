@@ -5,6 +5,7 @@
 
 	if (! isset ($_POST ["numero"]) == true) {
 		// si les données n'ont pas été postées, c'est le premier appel du formulaire : affichage de la vue sans message d'erreur
+		$numero = '';
 		$msgFooter = 'Annuler une réservation';
 		$themeFooter = $themeNormal;
 		include_once ('vues/VueAnnulerReservation.php');
