@@ -5,6 +5,7 @@
 
 	if ( ! isset ($_POST ["nom"]) == true ) {
 		// si les données n'ont pas été postées, c'est le premier appel du formulaire : affichage de la vue sans message d'erreur
+		$nom = "";
 		$msgFooter = 'Supprimer un utilisateur';
 		$themeFooter = $themeNormal;
 		include_once ('vues/VueSupprimerUtilisateur.php');

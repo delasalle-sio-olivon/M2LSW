@@ -5,6 +5,9 @@
 
 	if ( ! isset ($_POST ["nom"]) == true || ! isset ($_POST ["level"]) == true || ! isset ($_POST ["mail"]) == true) {
 		// si les données n'ont pas été postées, c'est le premier appel du formulaire : affichage de la vue sans message d'erreur
+		$nom = "";	
+		$mail = "";
+		$lvl = "";
 		$msgFooter = 'Créer un utilisateur';
 		$themeFooter = $themeNormal;
 		include_once ('vues/VueCreerUtilisateur.php');

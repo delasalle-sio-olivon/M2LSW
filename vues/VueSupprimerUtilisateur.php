@@ -18,7 +18,7 @@
 				<h4 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Supprimer un utilisateur</h4>
 				<form name="form1" id="form1" action="index.php?action=SupprimerUtilisateur" method="post">
 					<div data-role="fieldcontain" class="ui-hide-label">
-						<input type="text" name="nom" id="nom" placeholder="Entrez le nom" value="" >
+						<input type="text" name="nom" id="nom" placeholder="Entrez le nom" value="<?php echo $nom; ?>" >
 					</div>
 					<div data-role="fieldcontain">
 						<input type="submit" name="changerDeMdp" id=""changerDeMdp"" value="Supprimer l'utilisateur">

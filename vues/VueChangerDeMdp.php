@@ -18,10 +18,10 @@
 				<h4 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Modifier son mot de passe</h4>
 				<form name="form1" id="form1" action="index.php?action=ChangerDeMdp" method="post">
 					<div data-role="fieldcontain" class="ui-hide-label">
-						<input type="password" name="newmdp1" id="newmdp1" placeholder="Entrez un nouveau mot de passe" value="" >
+						<input type="password" name="newmdp1" id="newmdp1" placeholder="Entrez un nouveau mot de passe" value="<?php echo $mdp1; ?>" >
 					</div>
 					<div data-role="fieldcontain" class="ui-hide-label">
-						<input type="password" name="newmdp2" id="newmdp2" placeholder="Confirmer le nouveau mot de passe" value="" >
+						<input type="password" name="newmdp2" id="newmdp2" placeholder="Confirmer le nouveau mot de passe" value="<?php echo $mdp2; ?>" >
 					</div>
 
 					<div data-role="fieldcontain">

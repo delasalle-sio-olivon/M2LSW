@@ -5,6 +5,8 @@
 
 	if ( ! isset ($_POST ["newmdp1"]) == true || ! isset ($_POST ["newmdp2"]) == true) {
 		// si les données n'ont pas été postées, c'est le premier appel du formulaire : affichage de la vue sans message d'erreur
+		$mdp1 = "";
+		$mdp2 = "";
 		$msgFooter = 'Changer de mot de passe';
 		$themeFooter = $themeNormal;
 		include_once ('vues/VueChangerDeMdp.php');
