@@ -18,7 +18,7 @@
 	}
 	if ($nom == ''||$mail == '') {
 		// si les données sont incomplètes, réaffichage de la vue avec un message explicatif
-		$msgFooter = $lvl;
+		$msgFooter = 'Données incomplètes !';
 		$themeFooter = $themeProbleme;
 		include_once ('vues/VueCreerUtilisateur.php');
 	} else {
