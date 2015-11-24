@@ -18,7 +18,7 @@
 				<h4 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Annuler une réservation</h4>
 				<form name="form1" id="form1" action="index.php?action=AnnulerReservation" method="post">
 					<div data-role="fieldcontain" class="ui-hide-label">
-						<input type="number" name="numero" id="numero" placeholder="Entrez votre N° de réservation" value="" >
+						<input type="number" name="numero" id="numero" placeholder="Entrez votre N° de réservation" value="<?php echo $numero; ?>" >
 					</div>
 
 					<div data-role="fieldcontain">
