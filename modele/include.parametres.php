@@ -16,7 +16,7 @@ $PARAM_PWD = "";		// son mot de passe
 global $DELAI_DIGICODE, $ADR_MAIL_EMETTEUR;
 // valeur du délai (en secondes) pendant lequel le digicode est accepté avant l'heure de début de réservation
 // ou après l'heure de fin de réservation
-$DELAI_DIGICODE = 3600;			// 3600 sec ou 1 h
+$DELAI_DIGICODE = 600;			// 3600 sec ou 1 h
 // adresse de l'émetteur lors d'un envoi de courriel
 $ADR_MAIL_EMETTEUR = "delasalle.sio.crib@gmail.com";
 
